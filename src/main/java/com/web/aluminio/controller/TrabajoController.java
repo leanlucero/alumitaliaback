@@ -29,13 +29,13 @@ public class TrabajoController {
 		return trabRepo.findAllTrabajos();
 	}
 	  
-	@PostMapping("add")
+	@PostMapping("/admin/add")
 	public Trabajo createTrabajo(@RequestBody Trabajo trab) {
 		if (trab.getId() == 0 ) trab.setId(null);
 		return trabRepo.save(trab);
 	}
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/admin/delete/{id}")
 	public boolean borrarTrabajo(@PathVariable(value = "id")  Long id) {
 		return trabRepo.bajaFisica(id);
 	}

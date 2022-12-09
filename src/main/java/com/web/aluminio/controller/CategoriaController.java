@@ -32,13 +32,13 @@ public class CategoriaController {
 		return catServices.findAllCategorias();
 	}
 	  
-	@PostMapping("/add")
+	@PostMapping("/admin/add")
 	public Categoria createCategoria(@RequestBody Categoria cat) {
 		if (cat.getId() == 0 ) cat.setId(null);
 		return catServices.save(cat);
 	}
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/admin/delete/{id}")
 	public boolean borrarCategoria(@PathVariable(value = "id")  Long id) {
 		return catServices.bajaFisica(id);
 	}
