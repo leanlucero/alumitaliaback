@@ -32,8 +32,11 @@ public class Trabajo implements Serializable {
 	private String detalle;
 	@Column (name = "fecha")
 	private Date fecha;
-	@Column (nullable = false, name = "url")
-	private String url;
+	@Column (name = "imagenurl")
+	private String ImagenUrl;
+	@Column (name = "imagenid")
+	private String ImagenId;
+	
 	
 	@ManyToOne
 	@JoinColumn(name = "id_categoria")
@@ -63,24 +66,35 @@ public class Trabajo implements Serializable {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	public String getUrl() {
-		return url;
-	}
-	public void setUrl (String url) {
-		this.url = url;
-	}
 	public Categoria getCategoria() {
 		return categoria;
 	}
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	public Trabajo(String nombre, String detalle, String uRL, com.web.aluminio.model.Categoria categoria) {
+	
+	public String getImagenUrl() {
+		return ImagenUrl;
+	}
+	public void setImagenUrl(String imagenUrl) {
+		ImagenUrl = imagenUrl;
+	}
+	public String getImagenId() {
+		return ImagenId;
+	}
+	public void setImagenId(String imagenId) {
+		ImagenId = imagenId;
+	}
+	
+	public Trabajo(Long id, String nombre, String detalle, Date fecha, String imagenUrl, String imagenId,
+			Categoria categoria) {
 		super();
+		this.id = id;
 		this.nombre = nombre;
-		this.fecha = null;
 		this.detalle = detalle;
-		this.url = uRL;
+		this.fecha = fecha;
+		ImagenUrl = imagenUrl;
+		ImagenId = imagenId;
 		this.categoria = categoria;
 	}
 	public Trabajo() {

@@ -25,7 +25,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>		
+		</dependency>
 		<!-- JSON WEB TOKEN -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
@@ -61,7 +61,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency>			
+		<!-- CLOUDINARY PARA SUBIR IMAGENES -->	
+		<dependency>
+        	<groupId>com.cloudinary</groupId>
+        	<artifactId>cloudinary-http44</artifactId>
+        	<version>1.24.0</version>
+    	</dependency>
 	</dependencies>
 
 	<build>
