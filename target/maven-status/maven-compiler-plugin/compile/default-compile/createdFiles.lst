@@ -1,0 +1,16 @@
+com\web\aluminio\AluminioItaliaApplication.class
+com\web\aluminio\controller\CategoriaController.class
+com\web\aluminio\controller\AutenticationController.class
+com\web\aluminio\model\Admin.class
+com\web\aluminio\services\TrabajoServices.class
+com\web\aluminio\AluminioItaliaApplication$WebSecurityConfig.class
+com\web\aluminio\services\CategoriaServices.class
+com\web\aluminio\model\Trabajo.class
+com\web\aluminio\controller\ImagenController.class
+com\web\aluminio\services\CloudinaryServices.class
+com\web\aluminio\controller\TrabajoController.class
+com\web\aluminio\repositories\CategoriaRepository.class
+com\web\aluminio\model\Categoria.class
+com\web\aluminio\dto\Imagen.class
+com\web\aluminio\config\JWTAuthorizationFilter.class
+com\web\aluminio\repositories\TrabajoRepository.class
